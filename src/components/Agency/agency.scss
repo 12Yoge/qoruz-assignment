@@ -124,11 +124,10 @@
     &Container {
       flex-direction: column;
       gap: 48px;
-      padding: 24px;
     }
 
     &Data {
-      padding: 0;
+      padding: 24px 24px 0;
 
       h2 {
         font-size: 28px;
@@ -166,6 +165,10 @@
     &Img {
       max-width: 100%;
       width: 100%;
+
+      img {
+        border-radius: 0 0 24px 24px;
+      }
     }
   }
 }
