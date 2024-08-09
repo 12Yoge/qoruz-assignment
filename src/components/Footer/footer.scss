@@ -92,12 +92,22 @@
         font-size: 14px;
         opacity: 0.6;
       }
+
+      &Copyrights {
+        opacity: 0.9;
+      }
     }
 
     &List {
       flex-direction: column;
       width: 100%;
       gap: 0;
+
+      li {
+        &:last-child {
+          padding: 0 0 12px;
+        }
+      }
 
       &Data {
         width: 100%;

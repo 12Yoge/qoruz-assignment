@@ -3,7 +3,6 @@ import { useState } from "react";
 import companyLogo from "assets/images/companyLogo.svg";
 import downArrow from "assets/images/downArrow.svg";
 
-import "components/Footer/footer.scss";
 import {
   footerIcons,
   footerListCompany,
@@ -12,6 +11,8 @@ import {
 } from "constants/footer";
 
 import useScreenMobile from "hooks/useScreenMobile";
+
+import "components/Footer/footer.scss";
 
 const Footer = () => {
   const [open, setOpen] = useState({

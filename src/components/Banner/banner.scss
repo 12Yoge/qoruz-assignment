@@ -16,7 +16,7 @@
   h1 {
     @include font-style(4.8rem, 700, 48px);
     letter-spacing: -0.02em;
-    margin: 8px 0 24px;
+    margin: 8px 0 48px;
     color: $color-white-0;
   }
 
@@ -40,6 +40,7 @@
     h1 {
       font-size: 32px;
       margin-bottom: 0;
+      line-height: 41.6px;
     }
 
     p {

@@ -1,0 +1,188 @@
+@import "styles/variables.scss";
+
+.blog {
+  padding: 48px 24px;
+
+  &Data {
+    max-width: 1280px;
+    margin: 0 auto;
+    @include d-flex(flex-start, center);
+    gap: 8px;
+
+    &Mobile {
+      display: none;
+    }
+
+    span {
+      @include font-style(1.4rem, 500, 23.8px);
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    &SpecialText {
+      color: $color-orange-0;
+      font-weight: 700 !important;
+    }
+  }
+
+  &Container {
+    padding: 48px 0 0;
+    max-width: 1120px;
+    text-align: center;
+    margin: 0 auto;
+
+    &Headers {
+      @include d-flex(flex-start, center);
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 60px;
+
+      h3 {
+        @include font-style(1.6rem, 700, 16px);
+        letter-spacing: 0.1em;
+        color: $color-orange-0;
+        text-transform: uppercase;
+      }
+
+      h4 {
+        @include font-style(3.2rem, 700, 32px);
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        @include font-style(1.8rem, 400, 28.8px);
+        max-width: 947px;
+        margin: 0 auto;
+        color: $color-grey-4;
+      }
+    }
+  }
+
+  &Card {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 16px;
+
+    &:hover {
+      box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+
+      h3 {
+        color: $color-orange-0;
+      }
+    }
+
+    &List {
+      @include d-flex(space-between, flex-start);
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &Details {
+      background: $color-white-0;
+      @include d-flex(flex-start, flex-start);
+      flex-direction: column;
+      border-radius: 0 0 16px 16px;
+      border: 1px solid #99999933;
+      padding: 24px;
+
+      h3 {
+        @include font-style(2rem, 700, 26px);
+        text-align: left;
+        color: $color-black-1;
+        min-height: 78px;
+      }
+
+      span {
+        @include font-style(1.6rem, 600, 24px);
+        color: $color-black-1;
+        @include d-flex(flex-start, center);
+        gap: 8px;
+
+        &:hover {
+          color: $color-blue-0;
+
+          img {
+            transform: translate3D(3px, -2px, 0);
+            transition: transform 0.3s ease-in-out;
+            filter: invert(60%) sepia(50%) saturate(300%) hue-rotate(200deg)
+              brightness(95%) contrast(90%);
+          }
+        }
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 0 24px 48px;
+
+    &Container {
+      &Headers {
+        h3 {
+          font-size: 12px;
+        }
+
+        h4 {
+          font-size: 24px;
+          line-height: 31.2px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    &Card {
+      width: 100%;
+      max-width: 100%;
+
+      &Details {
+        gap: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 568px) {
+    &Data {
+      &Mobile {
+        display: block;
+        @include font-style(1.5rem, 400, 24px);
+        margin-top: 40px;
+        color: $color-grey-4;
+        text-align: center;
+
+        .readMore {
+          color: $color-orange-0;
+          cursor: pointer;
+        }
+      }
+
+      span {
+        white-space: nowrap;
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

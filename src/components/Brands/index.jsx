@@ -1,10 +1,10 @@
+import BrandCardMobile from "components/Brands/BrandCardMobile";
+import { brandCard, brandLocation } from "constants/brands";
+import useScreenMobile from "hooks/useScreenMobile";
+
 import brandLogo from "assets/images/qoruzCuratedLogo.svg";
 
-import { brandCard, brandLocation } from "constants/brands";
-
 import "components/Brands/brands.scss";
-import useScreenMobile from "hooks/useScreenMobile";
-import BrandCardMobile from "./BrandCardMobile";
 
 const Brands = () => {
   const isMobile = useScreenMobile({ size: 992 });

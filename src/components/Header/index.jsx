@@ -1,3 +1,8 @@
+import { useEffect, useState } from "react";
+
+import { headerList } from "constants/header";
+import useScreenMobile from "hooks/useScreenMobile";
+
 import companyLogo from "assets/images/headerCompanyLogo.svg";
 import blackArrow from "assets/images/buttonArrowBlack.svg";
 import whiteArrow from "assets/images/buttonArrowWhite.svg";
@@ -5,11 +10,7 @@ import downArrow from "assets/images/headerDownArrow.svg";
 import menuIcon from "assets/images/menu.svg";
 import closeIcon from "assets/images/closeIcon.svg";
 
-import { headerList } from "constants/header";
-
 import "components/Header/header.scss";
-import useScreenMobile from "hooks/useScreenMobile";
-import { useEffect, useState } from "react";
 
 const Header = () => {
   const isMobile = useScreenMobile({ size: 992 });
@@ -22,7 +23,6 @@ const Header = () => {
     } else {
       document.body.classList.remove("hide");
     }
-    // Cleanup function to remove the class when component unmounts
     return () => {
       document.body.classList.remove("hide");
     };

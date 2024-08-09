@@ -1,0 +1,165 @@
+@import "styles/variables.scss";
+
+.agency {
+  padding: 0 24px 48px;
+
+  &Container {
+    border-radius: 24px;
+    max-width: 1120px;
+    margin: 0 auto;
+    @include d-flex(space-between, center);
+    background: $color-grey-3;
+  }
+
+  &Data {
+    padding: 0 0 0 48px;
+
+    h2 {
+      @include font-style(4.8rem, 700, 48px);
+      font-family: Arial;
+      letter-spacing: -0.02em;
+      color: $color-black-1;
+      margin-bottom: 4px;
+    }
+
+    p {
+      @include font-style(2.4rem, 400, 28.8px);
+      color: $color-black-1;
+      letter-spacing: -0.02em;
+      max-width: 475px;
+    }
+  }
+
+  &Img {
+    max-width: 573px;
+
+    img {
+      border-radius: 0 24px 24px 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &Button {
+    @include d-flex(flex-start, center);
+    gap: 24px;
+    margin: 24px 0 0 0;
+    position: relative;
+
+    button {
+      @include font-style(1.6rem, 700, 16px);
+      padding: 17px 32px 17px 32px;
+      border-radius: 12px;
+      letter-spacing: -0.02em;
+      color: $color-white-0;
+      background: $color-black-1;
+      @include d-flex(space-between, center);
+      gap: 6px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      img {
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        img {
+          transform: translate3D(3px, -2px, 0);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    .whyRegister {
+      color: $color-black-1;
+      @include font-style(1.6rem, 700, 16px);
+      letter-spacing: -0.02em;
+      cursor: pointer;
+    }
+
+    &HoverImg {
+      position: absolute;
+      left: 70%;
+    }
+
+    ul {
+      background: $color-blue-1;
+      border-radius: 10px;
+      padding: 10px;
+      max-width: 340px;
+      position: absolute;
+      right: -44%;
+      top: 0;
+
+      li {
+        @include d-flex(flex-start, flex-start);
+        gap: 6px;
+        margin-bottom: 10px;
+
+        img {
+          width: 15px;
+          height: 15px;
+          margin: 7px 0 0 0;
+        }
+
+        span {
+          @include font-style(1.8rem, 400, 28.8px);
+          line-height: 28.8px;
+          color: $color-white-0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 48px 24px 80px;
+
+    &Container {
+      flex-direction: column;
+      gap: 48px;
+      padding: 24px;
+    }
+
+    &Data {
+      padding: 0;
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 18px;
+        max-width: 100%;
+      }
+    }
+
+    &Button {
+      flex-direction: column;
+
+      ul {
+        top: 110%;
+        right: 0;
+      }
+
+      button {
+        font-size: 1.4rem;
+      }
+
+      .whyRegister {
+        font-size: 1.4rem;
+      }
+
+      &HoverImg {
+        bottom: -34%;
+        left: 40%;
+      }
+    }
+
+    &Img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

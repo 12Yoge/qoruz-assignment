@@ -47,6 +47,10 @@
       outline: none;
       background: none;
 
+      img {
+        transition: transform 0.3s ease-in-out;
+      }
+
       &:hover {
         background: $color-grey-2;
         transition: transform 0.3s ease-in-out;
