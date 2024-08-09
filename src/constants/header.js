@@ -1,12 +1,17 @@
+import downArrow from "assets/images/headerDownArrow.svg";
+
 export const headerList = [
   {
-    name: "Solutions"
+    name: "Solutions",
+    image: downArrow
   },
   {
-    name: "Resources"
+    name: "Resources",
+    image: downArrow
   },
   {
-    name: "Features"
+    name: "Features",
+    image: downArrow
   },
   {
     name: "Pricing"

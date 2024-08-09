@@ -113,12 +113,14 @@
 
         &:hover {
           color: $color-blue-0;
+          text-decoration: underline;
+          text-underline-offset: 3px;
 
           img {
             transform: translate3D(3px, -2px, 0);
             transition: transform 0.3s ease-in-out;
-            filter: invert(60%) sepia(50%) saturate(300%) hue-rotate(200deg)
-              brightness(95%) contrast(90%);
+            filter: invert(49%) sepia(28%) saturate(458%) hue-rotate(180deg)
+              brightness(85%) contrast(100%);
           }
         }
       }

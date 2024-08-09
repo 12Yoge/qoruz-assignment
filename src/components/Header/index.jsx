@@ -6,7 +6,6 @@ import useScreenMobile from "hooks/useScreenMobile";
 import companyLogo from "assets/images/headerCompanyLogo.svg";
 import blackArrow from "assets/images/buttonArrowBlack.svg";
 import whiteArrow from "assets/images/buttonArrowWhite.svg";
-import downArrow from "assets/images/headerDownArrow.svg";
 import menuIcon from "assets/images/menu.svg";
 import closeIcon from "assets/images/closeIcon.svg";
 
@@ -43,7 +42,7 @@ const Header = () => {
               {headerList.map((item, index) => (
                 <li key={index}>
                   {item?.name}
-                  <img src={downArrow} alt="downArrow" />
+                  {item?.image && <img src={item?.image} alt="downArrow" />}
                 </li>
               ))}
             </ul>
@@ -53,11 +52,11 @@ const Header = () => {
         {!isMobile && (
           <div className="headerButton">
             <button className="headerButtonLogin">
-              Login
+              Log in
               <img className="img" src={blackArrow} alt="blackArrow" />
             </button>
             <button className="headerButtonLogin free">
-              Get started Free
+              Get started free
               <img className="img" src={whiteArrow} alt="whiteArrow" />
             </button>
           </div>
@@ -80,7 +79,7 @@ const Header = () => {
               {headerList.map((item, index) => (
                 <li key={index}>
                   {item?.name}
-                  <img src={downArrow} alt="downArrow" />
+                  {item?.image && <img src={item?.image} alt="downArrow" />}
                 </li>
               ))}
             </ul>

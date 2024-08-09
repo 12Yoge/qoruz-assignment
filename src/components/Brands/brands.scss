@@ -41,6 +41,7 @@
     &Updates {
       @include font-style(1.2rem, 500, 19.2px);
       color: $color-black-0;
+      text-transform: capitalize;
     }
   }
 

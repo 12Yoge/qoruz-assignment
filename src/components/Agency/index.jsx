@@ -13,10 +13,12 @@ const Agency = () => {
   const [showList, setShowList] = useState(false);
   const isMobile = useScreenMobile({ size: 992 });
 
+  // Show the list when mouse enters 'Why Register?'
   const handleMouseEnter = () => {
     setShowList(true);
   };
 
+  // Hide the list when mouse leaves 'Why Register?'
   const handleMouseLeave = () => {
     setShowList(false);
   };
