@@ -1,11 +1,13 @@
-import React from 'react'
+import Home from "containers/Home";
+
+import "styles/common.scss";
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      <Home />
+    </>
+  );
+};
 
-export default App
+export default App;

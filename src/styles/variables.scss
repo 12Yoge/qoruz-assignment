@@ -1,0 +1,16 @@
+$color-white-0: #ffffff;
+
+$color-black-0: #000000;
+
+// Flex mixin
+@mixin d-flex($jc: flex-start, $al: flex-start) {
+  display: flex;
+  align-items: $al;
+  justify-content: $jc;
+}
+
+@mixin font-style($fs: 1.6rem, $fw: 400, $lh: 120%) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}

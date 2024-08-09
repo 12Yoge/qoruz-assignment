@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+npm run spell-check
+npm run lint
+npm run prettier-sass
+npm run prettier
+git add .
