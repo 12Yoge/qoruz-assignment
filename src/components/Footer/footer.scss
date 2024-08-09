@@ -1,1 +1,133 @@
 @import "styles/variables.scss";
+
+.footer {
+  background: $color-brown-0;
+  padding: 48px 0;
+
+  &Data {
+    @include d-flex(space-between, flex-start);
+  }
+
+  &Logo {
+    max-width: 312px !important;
+
+    img {
+      max-width: 132px;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 25px;
+    }
+
+    &Description {
+      letter-spacing: -0.02em;
+      @include font-style(1.6rem, 500, 20px);
+      color: $color-white-0;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    ul {
+      @include d-flex(flex-start, center);
+      gap: 18px;
+      margin-bottom: 46px;
+
+      li {
+        width: 24px;
+        height: 24px;
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &Copyrights {
+      @include font-style(1.2rem, 400, 19.2px);
+      opacity: 0.5;
+      color: $color-white-0;
+    }
+  }
+
+  &List {
+    @include d-flex(space-between, flex-start);
+    gap: 80px;
+
+    &Data {
+      color: $color-orange-0;
+      @include font-style(1.8rem, 700, 28.8px);
+
+      li {
+        color: $color-white-0;
+        @include font-style(1.8rem, 400, 28.8px);
+        opacity: 0.9;
+        padding: 0 0 4px 0;
+
+        &:last-child {
+          padding: 0;
+        }
+
+        &:first-child {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  //  responsive
+  @media (max-width: 992px) {
+    padding: 24px 24px 12px;
+
+    &Data {
+      flex-direction: column;
+      padding: 0 !important;
+    }
+
+    &Logo {
+      max-width: 100% !important;
+
+      img {
+        margin-bottom: 20px;
+      }
+
+      &Description {
+        font-size: 14px;
+        opacity: 0.6;
+      }
+    }
+
+    &List {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+
+      &Data {
+        width: 100%;
+        font-weight: 600;
+
+        span {
+          @include d-flex(flex-start, center);
+          gap: 12px;
+          border-bottom: 1px solid $color-grey-0;
+          margin: 0 0 24px 0;
+          padding: 0 0 4px 0;
+        }
+
+        img {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    .mobileData {
+      @include d-flex(space-between, center);
+      margin-top: 30px;
+      width: 100%;
+
+      ul {
+        @include d-flex(center, center);
+        gap: 10px;
+      }
+    }
+  }
+}
