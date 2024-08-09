@@ -1,1 +1,129 @@
 @import "styles/variables.scss";
+
+.header {
+  background: $color-white-0;
+  border-bottom: 1px solid $color-grey-1;
+
+  &Container {
+    max-width: 1120px !important;
+    @include d-flex(space-between, center);
+  }
+
+  &List {
+    @include d-flex(flex-start, center);
+    gap: 24px;
+
+    ul {
+      gap: 24px;
+      @include d-flex(flex-start, center);
+
+      li {
+        @include d-flex(flex-start, center);
+        gap: 6px;
+        cursor: pointer;
+        @include font-style(1.6rem, 400, 24px);
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &Button {
+    @include d-flex(flex-start, center);
+    gap: 20px;
+
+    &Login {
+      @include d-flex(flex-start, center);
+      gap: 4px;
+      @include font-style(1.6rem, 700, 16px);
+      letter-spacing: -0.02em;
+      padding: 20px 32px 20px 32px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      background: none;
+
+      &:hover {
+        background: $color-grey-2;
+        transition: transform 0.3s ease-in-out;
+
+        .img {
+          transition: transform 0.3s ease-in-out;
+          transform: translate3D(5px, -5px, 0);
+        }
+      }
+    }
+  }
+
+  .menuIcon {
+    cursor: pointer;
+    width: 24px;
+    height: 25px;
+  }
+
+  .free {
+    background: $color-orange-0;
+    color: $color-white-0;
+
+    &:hover {
+      transition: transform 0.3s ease-in-out;
+
+      .img {
+        transition: transform 0.3s ease-in-out;
+        transform: translate3D(5px, -5px, 0);
+      }
+    }
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    position: relative;
+
+    &Container {
+      padding: 12px !important;
+    }
+
+    &MobileMenu {
+      position: absolute;
+      background: $color-white-0;
+      width: 100%;
+      padding: 24px;
+      top: 72px;
+      height: calc(100vh - 72px);
+      z-index: 9;
+    }
+
+    &List {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+
+      ul {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+
+        li {
+          width: 100%;
+          justify-content: space-between;
+          border-bottom: 1px solid $color-grey-1;
+          padding-bottom: 12px;
+        }
+      }
+    }
+
+    &Button {
+      flex-direction: column;
+      width: 100%;
+
+      &Login {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
