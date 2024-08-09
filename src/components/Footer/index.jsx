@@ -32,7 +32,17 @@ const Footer = () => {
   const renderFooterList = (title, list, section) => (
     <ul className="footerListData">
       <span onClick={() => handleClick(section)}>
-        {title} {isMobile && <img src={downArrow} alt="Toggle section" />}
+        {title}{" "}
+        {isMobile && (
+          <img
+            src={downArrow}
+            alt="Toggle section"
+            style={{
+              transform: open[section] ? "rotate(180deg)" : "rotate(0deg)",
+              transition: "transform 0.3s ease"
+            }}
+          />
+        )}
       </span>
       {(isMobile ? open[section] : true) &&
         list.map((item, index) => <li key={index}>{item?.data}</li>)}
@@ -55,7 +65,7 @@ const Footer = () => {
               <ul>
                 {footerIcons.map((item, index) => (
                   <li key={index}>
-                    <img src={item?.icon} alt={item?.alt || "Footer Icon"} />
+                    <img src={item?.icon} alt="Footer Icon" />
                   </li>
                 ))}
               </ul>

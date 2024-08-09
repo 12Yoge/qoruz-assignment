@@ -2,7 +2,6 @@
 
 .footer {
   background: $color-brown-0;
-  padding: 48px 0;
 
   &Data {
     @include d-flex(space-between, flex-start);
