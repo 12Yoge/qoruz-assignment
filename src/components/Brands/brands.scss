@@ -1,0 +1,294 @@
+@import "styles/variables.scss";
+
+.brand {
+  background: $color-white-0;
+
+  &Logo {
+    @include d-flex(space-between, center);
+    padding: 16px 24px !important;
+    border-bottom: 1px solid $color-grey-1;
+    text-transform: uppercase;
+
+    &Data {
+      max-width: 1280px;
+      margin: 0 auto;
+      @include d-flex(space-between, center);
+      width: 100%;
+
+      & > div {
+        @include d-flex(flex-start, flex-start);
+        gap: 12px;
+      }
+
+      .data {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .specialText {
+        @include font-style(1.2rem, 400, 19.2px);
+        color: $color-black-1;
+        opacity: 0.9;
+      }
+
+      p {
+        @include font-style(1.6rem, 700, 22.4px);
+        letter-spacing: -0.02em;
+        color: $color-black-1;
+      }
+    }
+
+    &Updates {
+      @include font-style(1.2rem, 500, 19.2px);
+      color: $color-black-0;
+    }
+  }
+
+  // card
+  &Card {
+    @include d-flex(space-between, center);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 0;
+    border-bottom: 1px solid $color-grey-1;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .svgIcon {
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      h3 {
+        color: $color-orange-0;
+      }
+
+      button {
+        color: $color-white-0;
+        background: $color-orange-0;
+
+        .img {
+          transform: translate3D(3px, -2px, 0);
+          transition: transform 0.3s ease-in-out;
+          filter: invert(100%) brightness(100%) contrast(100%);
+        }
+      }
+
+      .svgIcon {
+        filter: brightness(0) saturate(100%) invert(0%) sepia(100%)
+          saturate(7487%) hue-rotate(0deg) brightness(94%) contrast(104%);
+      }
+
+      span {
+        color: $color-black-1;
+      }
+    }
+
+    &Details {
+      h3 {
+        @include font-style(2rem, 700, 26px);
+        letter-spacing: -0.02em;
+        color: $color-black-0;
+        margin-bottom: 8px;
+      }
+
+      .category {
+        @include d-flex(flex-start, center);
+        gap: 8px;
+        margin-bottom: 9px;
+
+        span {
+          padding: 4px 8px 4px 8px;
+          background: $color-grey-3;
+          @include font-style(1.2rem, 700, 19.2px);
+          border-radius: 5px;
+        }
+      }
+
+      p {
+        @include font-style(1.4rem, 400, 22.4px);
+        color: $color-grey-4;
+        max-width: 648px;
+        margin-bottom: 16px;
+      }
+
+      ul {
+        @include d-flex(flex-start, center);
+        gap: 24px;
+
+        li {
+          @include d-flex(flex-start, center);
+          gap: 4px;
+
+          span {
+            @include font-style(1.4rem, 500, 23.8px);
+            color: $color-grey-5;
+          }
+        }
+      }
+    }
+
+    &Logo {
+      @include d-flex(space-between, flex-start);
+      gap: 12px;
+
+      &Profile {
+        position: relative;
+
+        .verifiedLogo {
+          position: absolute;
+          bottom: 3px;
+          right: -10px;
+        }
+      }
+    }
+  }
+
+  &Button {
+    button {
+      color: $color-black-1;
+      @include font-style(1.4rem, 600, 21px);
+      border: 1px solid $color-grey-1;
+      outline: none;
+      padding: 12px 16px 12px 17px;
+      border-radius: 10px;
+      background: none;
+      @include d-flex(flex-start, center);
+      gap: 4px;
+      cursor: pointer;
+
+      .img {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover {
+        transition: transform 0.3s ease-in-out;
+
+        .img {
+          transition: transform 0.3s ease-in-out;
+          transform: translate3D(2px, -1px, 0);
+        }
+      }
+    }
+  }
+}
+
+// mobile-responsive
+.mobileBrand {
+  &Container {
+    @include d-flex();
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px 24px;
+  }
+
+  &Card {
+    border-radius: 24px;
+    box-shadow: 0px 1px 3px 0px #00000026;
+    padding: 24px;
+    width: 100%;
+
+    .profile {
+      margin-bottom: 8px;
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    h3 {
+      @include font-style(2rem, 700, 26px);
+      letter-spacing: -0.02em;
+      color: $color-black-0;
+      margin-bottom: 4px;
+    }
+
+    & > div {
+      @include d-flex(flex-start, flex-start);
+      gap: 6px;
+    }
+
+    .category {
+      @include d-flex();
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 9px;
+
+      span {
+        padding: 4px 8px 4px 8px;
+        background: $color-grey-3;
+        @include font-style(1.2rem, 700, 19.2px);
+        border-radius: 5px;
+      }
+    }
+
+    p {
+      @include font-style(1.4rem, 400, 22.4px);
+      color: $color-grey-4;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      @include d-flex(flex-start, center);
+      gap: 24px;
+      margin-bottom: 24px;
+
+      li {
+        @include d-flex(flex-start, center);
+        gap: 4px;
+
+        span {
+          @include font-style(1.4rem, 500, 23.8px);
+          color: $color-grey-6;
+        }
+      }
+    }
+
+    button {
+      outline: none;
+      color: $color-white-0;
+      background: $color-orange-0;
+      padding: 11px 12px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      @include d-flex(center, center);
+      gap: 6px;
+
+      .img {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover {
+        transition: transform 0.3s ease-in-out;
+
+        .img {
+          transition: transform 0.3s ease-in-out;
+          transform: translate3D(2px, -1px, 0);
+        }
+      }
+    }
+  }
+
+  &Logo {
+    display: block;
+    padding: 48px 0 0;
+
+    &Para {
+      @include font-style(1.2rem, 500, 19.2px);
+      color: $color-black-1;
+    }
+  }
+}

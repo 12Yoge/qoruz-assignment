@@ -6,7 +6,7 @@
 
   &Container {
     max-width: 1120px !important;
-    padding: 24px !important;
+    padding: 16px !important;
     @include d-flex(space-between, center);
   }
 
