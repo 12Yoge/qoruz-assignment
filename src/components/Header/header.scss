@@ -100,8 +100,6 @@
     &List {
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
-      height: 100%;
 
       ul {
         align-items: flex-start;
@@ -127,4 +125,8 @@
       }
     }
   }
+}
+
+.hide {
+  overflow: hidden;
 }

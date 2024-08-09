@@ -18,13 +18,13 @@ const Header = () => {
 
   useEffect(() => {
     if (isDropdownOpen) {
-      document.body.classList.add("overflow-hidden");
+      document.body.classList.add("hide");
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("hide");
     }
     // Cleanup function to remove the class when component unmounts
     return () => {
-      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("hide");
     };
   }, [isDropdownOpen]);
 
